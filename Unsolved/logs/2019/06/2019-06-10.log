@@ -32,3 +32,8 @@
 05:26:45.732 GMT - OK, table delete user created if not existed
 05:26:45.738 GMT - OK, table modify email dropped if existed
 05:26:45.802 GMT - OK, table modify email created if not existed
+23:40:10.924 GMT - Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+23:41:26.830 GMT - Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+23:43:34.280 GMT - Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+23:44:34.751 GMT - Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+23:49:55.822 GMT - Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
