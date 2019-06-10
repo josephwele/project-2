@@ -1,3 +1,4 @@
+const mysql = require('mysql');
 const http = require('http');
 const express = require('express');
 const cors = require('cors');
@@ -32,11 +33,12 @@ user.tableExisting(config.userTableName, (error, existing) => {
 });
 
 // USER LOGIN
-app.post('/user/login/:email/:pass', function(req, res) {
+app.post('/user/login', function(req, res) {
     let info = req.body;
-    if (user.isEmailValid(req.params.email)) {
-        if (user.isPasswordValid(req.params.pass)) {
-            user.login(req.params.email, req.params.pass, (error, isLoginCorrect, isPassCorrect, authToken) => {
+    console.log(info);
+    if (user.isEmailValid(info.email)) {
+        if (user.isPasswordValidinfo.password) {
+            user.login(info.email,info.password, (error, isLoginCorrect, isPassCorrect, authToken) => {
                 if (error) {
                     res.json({ success: false, error: 'system error' });
                 } else if (!isLoginCorrect) {
@@ -55,20 +57,20 @@ app.post('/user/login/:email/:pass', function(req, res) {
     }
 });
 // USER CREATION
-app.post('/user/create/:email/:pass', function(req, res) {
+app.post('/user/create', function(req, res) {
     console.log('someone access create');
     let info = req.body;
     console.log(req.params);
-    if (user.isEmailValid(req.params.email)) {
+    if (user.isEmailValid(info.email)) {
         console.log('email is valid');
-        user.isEmailAlreadyTaken(req.params.email, (error, existing) => {
+        user.isEmailAlreadyTaken(info.email, (error, existing) => {
             if (error) {
                 res.json({ success: false, error: 'system error' });
             } else if (existing) {
                 res.json({ success: false, error: 'email not available' });
             } else {
-                if (user.isPasswordValid(req.params.pass)) {
-                    user.createUser(req.params.email, req.params.pass, info.userData ? info.userData : {},
+                if (user.isPasswordValid(info.password)) {
+                    user.createUser(info.email,info.password, info.userData ? info.userData : {},
                         (error, loginData, userData, confirmToken) => {
                             if (!error && confirmToken) {
                                 res.json({ success: true, confirmToken: confirmToken });

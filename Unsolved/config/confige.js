@@ -4,7 +4,7 @@ exports.sqlParams = {
     port: '3306',
     database: 'userTest2',
     user: 'root',
-    password: 'enteryourpassword'
+    password: 'Sgh19820501'
 };
 exports.userTableName = 'user';
 exports.clientAppToken = ['sdfls-fsdfl-2323D-dseer-qzlot-sgegq'];
