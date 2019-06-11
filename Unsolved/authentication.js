@@ -90,6 +90,27 @@ app.post('/user/create', function(req, res) {
         res.json({ success: false, error: 'email not valid' });
     }
 });
+//User log out 
+app.post("/user/logout", function(req, res) {
+    if (req.body.authToken) {
+        user.logout(req.body.authToken, (error, isAuthTokenValid, isLoggedOut) => {
+            if (!isAuthTokenValid) {
+                res.json({ success: false, error: "authentication token not valid" });
+            }
+            if (error) {
+                res.json({ success: false, error: "system error" });
+            } else if (isLoggedOut) {
+                console.log("logout succesfull")
+                res.json({ success: true });
+            } else {
+                res.json({ success: false, error: "logout not done" });
+            }
+        });
+    } else {
+        res.json({ success: false, error: "access token not valid" });
+    }
+});
+
 // START SERVER LISTENING - PLESK SYSTEM STYLE ////
 
 app.listen(PORT, function() {
