@@ -83,10 +83,24 @@ input{clear: both;
        
   }
 
-  .col-3-3{
+  
+  .port {
     text-align: center;
+     
   }
 
+  .future-btn{
+    background: linear-gradient(#49708f, #293f50);
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    
+    padding: 8px 16px;
+  }
+  
+
+  
   
 
   
