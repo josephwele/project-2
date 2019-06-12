@@ -1,0 +1,58 @@
+00:46:08.568 GMT - Error DB: Error: ER_NO_SUCH_TABLE: Table 'usertest2.undefined' doesn't exist
+00:47:25.660 GMT - Error DB: Error: ER_NO_SUCH_TABLE: Table 'usertest2.undefined' doesn't exist
+00:49:57.561 GMT - Error DB: Error: ER_NO_SUCH_TABLE: Table 'usertest2.undefined' doesn't exist
+00:51:32.149 GMT - Error DB: Error: ER_NO_SUCH_TABLE: Table 'usertest2.undefined' doesn't exist
+01:03:01.408 GMT - Error DB: Error: ER_NO_SUCH_TABLE: Table 'usertest2.undefined' doesn't exist
+01:05:30.111 GMT - Error DB: Error: ER_NO_SUCH_TABLE: Table 'usertest2.undefined' doesn't exist
+01:15:24.022 GMT - OK, table user dropped if existed
+01:15:24.115 GMT - OK, table user created if not existed
+01:15:24.126 GMT - OK, table user confirm dropped if existed
+01:15:24.183 GMT - OK, table user confirm created if not existed
+01:15:24.191 GMT - OK, table reset password dropped if existed
+01:15:24.215 GMT - OK, table delete user dropped if existed
+01:15:24.262 GMT - OK, table reset password created if not existed
+01:15:24.277 GMT - OK, table delete user created if not existed
+01:15:24.282 GMT - OK, table modify email dropped if existed
+01:15:24.341 GMT - OK, table modify email created if not existed
+05:02:00.300 GMT - Error: ER_BAD_FIELD_ERROR: Unknown column 'firstName' in 'field list'
+05:07:15.114 GMT - OK, table user dropped if existed
+05:07:15.190 GMT - OK, table user created if not existed
+05:07:31.019 GMT - Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+05:09:02.946 GMT - Error: ER_NO_DEFAULT_FOR_FIELD: Field 'firstName' doesn't have a default value
+05:10:10.394 GMT - Error: ER_NO_DEFAULT_FOR_FIELD: Field 'firstName' doesn't have a default value
+05:12:07.621 GMT - Error: ER_NO_DEFAULT_FOR_FIELD: Field 'firstName' doesn't have a default value
+05:15:25.972 GMT - Error: ER_NO_DEFAULT_FOR_FIELD: Field 'firstName' doesn't have a default value
+05:18:45.842 GMT - Error: ER_NO_DEFAULT_FOR_FIELD: Field 'firstName' doesn't have a default value
+05:20:04.140 GMT - Error: ER_NO_DEFAULT_FOR_FIELD: Field 'firstName' doesn't have a default value
+05:22:44.246 GMT - Error: ER_BAD_FIELD_ERROR: Unknown column 'abebe' in 'field list'
+05:23:49.349 GMT - Error: ER_NO_DEFAULT_FOR_FIELD: Field 'gender' doesn't have a default value
+05:25:11.552 GMT - Error: ER_NO_DEFAULT_FOR_FIELD: Field 'gender' doesn't have a default value
+05:26:53.167 GMT - Error: ER_TRUNCATED_WRONG_VALUE: Incorrect date value: '221.111111111111111111' for column 'birthdate' at row 1
+05:27:43.590 GMT - Error: ER_TRUNCATED_WRONG_VALUE: Incorrect date value: '221.111111111111111111' for column 'birthdate' at row 1
+05:28:55.470 GMT - Error: ER_TRUNCATED_WRONG_VALUE: Incorrect date value: '1980' for column 'birthdate' at row 1
+05:29:43.495 GMT - Error: ER_TRUNCATED_WRONG_VALUE: Incorrect date value: '1989' for column 'birthdate' at row 1
+05:31:28.854 GMT - Error: ER_TRUNCATED_WRONG_VALUE: Incorrect date value: '1989' for column 'birthdate' at row 1
+05:33:24.753 GMT - Error: ER_TRUNCATED_WRONG_VALUE: Incorrect date value: '1999' for column 'birthdate' at row 1
+05:35:19.042 GMT - Error: ER_NO_SUCH_TABLE: Table 'newuser.undefined' doesn't exist
+05:40:12.601 GMT - Error: ER_NO_DEFAULT_FOR_FIELD: Field 'firstName' doesn't have a default value
+05:42:13.025 GMT - Error: ER_NO_DEFAULT_FOR_FIELD: Field 'gender' doesn't have a default value
+05:43:33.289 GMT - Error: ER_NO_DEFAULT_FOR_FIELD: Field 'gender' doesn't have a default value
+05:45:59.828 GMT - Error: ER_NO_DEFAULT_FOR_FIELD: Field 'gender' doesn't have a default value
+05:54:50.848 GMT - OK, table user dropped if existed
+05:54:50.853 GMT - Error creating table user: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET DEFAULT ABEBE,lastName CHAR(10) SET DEFAULT ABEBE,
+            email CHAR(64' at line 1
+05:54:50.854 GMT - Error occured during database initialization
+05:56:53.231 GMT - OK, table user dropped if existed
+05:56:53.235 GMT - Error creating table user: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET DEFAULT "ABEBE",lastName CHAR(10) SET DEFAULT "ABEBE",
+            email CHA' at line 1
+05:56:53.235 GMT - Error occured during database initialization
+05:57:52.594 GMT - OK, table user dropped if existed
+05:57:52.660 GMT - OK, table user created if not existed
+05:57:52.666 GMT - OK, table user confirm dropped if existed
+05:57:52.700 GMT - OK, table user confirm created if not existed
+05:57:52.706 GMT - OK, table reset password dropped if existed
+05:57:52.718 GMT - OK, table delete user dropped if existed
+05:57:52.766 GMT - OK, table reset password created if not existed
+05:57:52.782 GMT - OK, table delete user created if not existed
+05:57:52.786 GMT - OK, table modify email dropped if existed
+05:57:52.841 GMT - OK, table modify email created if not existed
