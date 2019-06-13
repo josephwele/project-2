@@ -3,7 +3,7 @@ window.onload = function() {
 };
 // sign in form
 
-document.querySelector('#sign-in').addEventListener('click', function(event) {
+/*document.querySelector('#sign-in').addEventListener('click', function(event) {
     event.preventDefault();
 
     // Make a logininfo object
@@ -21,10 +21,11 @@ document.querySelector('#sign-in').addEventListener('click', function(event) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(logininfo)
     }).then(function(response) {
-        console.log(response);
+        fetch(response.url, {
+            method: 'get'
+        })
     });
-});
-
+});*/
 // user create form
 document.querySelector("#btn").addEventListener("click", function(event) {
     event.preventDefault();
