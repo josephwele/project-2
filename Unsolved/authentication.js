@@ -6,13 +6,15 @@ const bodyParser = require('body-parser');
 const logger = require('futurosenso-log');
 const user = require('futurosenso-user-mysql');
 const config = require('./config/confige.js');
-const match = require('./matcher');
+var path = require('path');
+// const match = require('./matcher');
 /// / EXPRESS INIT ////
 
 var app = express();
 app.use(cors());
-app.use(bodyParser.text({ limit: '1kb' }));
-app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.json());
+app.use(bodyParser.urlencoded({ urlencoded: true }));
 const PORT = process.env.PORT || 300;
 const ENV = process.env.NODE_ENV || 'development';
 /// / DATABASE INIT ////
@@ -34,7 +36,7 @@ user.tableExisting(config.userTableName, (error, existing) => {
 
 // USER LOGIN
 app.post('/user/login', function(req, res) {
-    let info = req.body;
+    let info = req.body.body;
     console.log(info);
     if (user.isEmailValid(info.email)) {
         if (user.isPasswordValid(info.password)) {
@@ -47,6 +49,7 @@ app.post('/user/login', function(req, res) {
                     res.json({ success: false, error: 'password not correct' });
                 } else if (authToken) {
                     console.log('loged in correctly');
+                    res.sendFile(path.join(__dirname, '../Unsolved/public/future.html'));
                 }
             });
         } else {
@@ -110,14 +113,7 @@ app.post('/user/logout', function(req, res) {
         res.json({ success: false, error: 'access token not valid' });
     }
 });
-
-//= ========================================================================================//
-// var pool = connection.connect();
-app.get('/', function(req, res) {
-    match.matcher()
-
-});
-
+app.get('/login', function(req, res) {});
 // START SERVER LISTENING - PLESK SYSTEM STYLE ////
 
 app.listen(PORT, function() {
@@ -126,4 +122,3 @@ app.listen(PORT, function() {
         PORT,
         PORT);
 });
-//= =================================================================================//
