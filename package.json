@@ -2,9 +2,9 @@
     "name": "project-2",
     "version": "1.0.0",
     "description": "Project 2 Starter",
-    "main": "authentication.js",
+    "main": "server.js",
     "scripts": {
-        "start": "node authentication.js",
+        "start": "node server.js",
         "lint": "standard --verbose | snazzy",
         "fix": "standard --fix .",
         "test": "npm run lint && cross-env NODE_ENV=test mocha -u tdd --reporter spec --exit"
