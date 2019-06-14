@@ -3,8 +3,8 @@ window.onload = function () {
 }
 // sign in form
 
-document.querySelector('#sign-in').addEventListener('click', function (event) {
-  event.preventDefault()
+/*document.querySelector('#sign-in').addEventListener('click', function(event) {
+    event.preventDefault();
 
   // Make a logininfo object
   var logininfo = {
@@ -15,16 +15,17 @@ document.querySelector('#sign-in').addEventListener('click', function (event) {
 
   console.log(logininfo)
 
-  // Send the POST request.
-  fetch('http://localhost:300/user/login', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(logininfo)
-  }).then(function (response) {
-    console.log(response)
-  })
-})
-
+    // Send the POST request.
+    fetch('http://localhost:300/user/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(logininfo)
+    }).then(function(response) {
+        fetch(response.url, {
+            method: 'get'
+        })
+    });
+});*/
 // user create form
 document.querySelector('#btn').addEventListener('click', function (event) {
   event.preventDefault()
