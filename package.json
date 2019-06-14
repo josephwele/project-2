@@ -2,7 +2,7 @@
     "name": "project-2",
     "version": "1.0.0",
     "description": "Project 2 Starter",
-    "main": "server.js",
+    "main": "authentication.js",
     "scripts": {
         "start": "nodemon authentication.js",
         "lint": "standard --verbose | snazzy",
