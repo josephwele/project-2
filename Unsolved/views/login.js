@@ -1,6 +1,6 @@
-window.onload = function () {
-  alert('js connnected')
-}
+// window.onload = function () {
+//   alert('js connnected')
+// }
 // sign in form
 
 /*document.querySelector('#sign-in').addEventListener('click', function(event) {
@@ -32,7 +32,9 @@ document.querySelector('#btn').addEventListener('click', function (event) {
   // Make a logininfo object
   var signupinfo = {
     email: document.querySelector('#e-mail').value.trim(),
-    password: document.querySelector('#pass').value.trim()
+    password: document.querySelector('#pass').value.trim(),
+    first: document.querySelector('#fname').value.trim(),
+    last: document.querySelector('#lname').value.trim()
   }
   console.log(signupinfo)
   // Send the POST request.
