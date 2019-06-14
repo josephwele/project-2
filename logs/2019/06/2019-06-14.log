@@ -66,3 +66,13 @@
 10:31:32.792 GMT - OK, table delete user created if not existed
 10:31:32.793 GMT - OK, table modify email dropped if existed
 10:31:32.807 GMT - OK, table modify email created if not existed
+21:03:13.217 GMT - OK, table user dropped if existed
+21:03:13.237 GMT - OK, table user created if not existed
+21:03:13.239 GMT - OK, table user confirm dropped if existed
+21:03:13.250 GMT - OK, table user confirm created if not existed
+21:03:13.252 GMT - OK, table reset password dropped if existed
+21:03:13.255 GMT - OK, table delete user dropped if existed
+21:03:13.272 GMT - OK, table reset password created if not existed
+21:03:13.272 GMT - OK, table delete user created if not existed
+21:03:13.273 GMT - OK, table modify email dropped if existed
+21:03:13.287 GMT - OK, table modify email created if not existed
