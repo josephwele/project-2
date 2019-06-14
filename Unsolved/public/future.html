@@ -5,15 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="styles/styles.css">
+    <base href="/">
+    <link rel="stylesheet" href="styles/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link rel="short cut icon" href="favicon.ico" />
     <title>Document</title>
 </head>
 
-<body class="future">
+<body background="assests/background-cover.jpg" style="background-repeat:no-repeat;background-position: center center">
     <div class="port">
-
         <div class="heading">
-            <h2><b>Well come to YSH Bikes!</b></h2>
+            <h2><b>Well come to YSP Bikes!</b></h2>
+
+            <div class="loginName1">
+                <h2>Welcome</h2>
+                <asp:LoginName ID="loginName1" runat="server" Font-Bold="true" />
+                <br />
+                <br />
+                <asp:LoginStatus ID="LoginStatus1" runat="server" />
+            </div>
+
             <h2><i>Where do you want to ride?</i></h2>
         </div>
 

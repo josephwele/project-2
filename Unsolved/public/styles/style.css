@@ -1,40 +1,40 @@
+<<<<<<< HEAD:Unsolved/public/styles/style.css
+.navbar {
+    background: teal;
+=======
 
 .container-fluid{
     background: teal;
     
     
+>>>>>>> 2b0ea0f2021322ea78c8f51f1eadd7d0c83a9a9c:Unsolved/views/style.css
     height: 100px;
-    
 }
-.form{display: block;
+
+.form {
+    display: block;
     float: right;
     padding-bottom: 120px;
 }
-.bikes{
-    
 
+.bikes {
     padding-bottom: 130px;
 }
 
-
-.col-2-3{
+.col-2-3 {
     float: right;
     height: 600px;
     width: 600px;
-    
 }
+
 .col-1-3 {
     float: left;
     padding-top: 20px;
     padding-left: 30px;
     color: #27F1F6;
-    
-  }
- 
-  
+}
 
-
-  h1{
+h1 {
     background: linear-gradient(#49708f, #293f50);
     border: 0;
     color: #fff;
@@ -42,19 +42,17 @@
     font-weight: bold;
     float: left;
     padding: 8px 16px;
-    clear: both;  
-  }
-  
-  
-  
-  
+    clear: both;
+}
 
-input{clear: both;
+input {
+    clear: both;
     padding-left: 5px;
     margin-right: 20px;
     border-radius: 5%
 }
-.account-action .btn{
+
+.account-action .btn {
     background: linear-gradient(#49708f, #293f50);
     border: 0;
     color: #fff;
@@ -62,15 +60,37 @@ input{clear: both;
     font-weight: bold;
     float: left;
     padding: 8px 16px;
-  }
+}
 
-  .fixed-bottom{
+.fixed-bottom {
     background: rgb(99, 117, 151);
     text-align: center;
     padding: 5px;
     border-top: solid 3px teal;
 }
 
+<<<<<<< HEAD:Unsolved/public/styles/style.css
+
+/* future.html styling */
+
+.future {
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.port {
+    text-align: center;
+}
+
+.future-btn {
+    background: linear-gradient(#49708f, #b6d3e9);
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 8px 16px;
+}
+=======
 
 
 
@@ -81,4 +101,8 @@ input{clear: both;
 
 
 
+>>>>>>> 2b0ea0f2021322ea78c8f51f1eadd7d0c83a9a9c:Unsolved/views/style.css
 
+.heading h2 {
+    color: #071279;
+}
