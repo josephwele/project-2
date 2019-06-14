@@ -4,7 +4,7 @@
     "description": "Project 2 Starter",
     "main": "authentication.js",
     "scripts": {
-        "start": "nodemon authentication.js",
+        "start": "node authentication.js",
         "lint": "standard --verbose | snazzy",
         "fix": "standard --fix .",
         "test": "npm run lint && cross-env NODE_ENV=test mocha -u tdd --reporter spec --exit"
