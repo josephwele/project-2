@@ -5,12 +5,12 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 const logger = require('futurosenso-log')
 const user = require('futurosenso-user-mysql')
-const config = require('./config/confige.js')
-const knex = require('./config/connection.js')
+const config = require('./configration/confige.js')
+const knex = require('./configration/connection.js')
 var favicon = require('serve-favicon')
 var path = require('path')
-// const match = require('./matcher')
-// / / EXPRESS INIT ////
+    // const match = require('./matcher')
+    // / / EXPRESS INIT ////
 
 var app = express()
 app.use(cors())
@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ urlencoded: true }))
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 const PORT = process.env.PORT || 3000
 const ENV = process.env.NODE_ENV || 'development'
-// / / DATABASE INIT ////
+    // / / DATABASE INIT ////
 if (!user.connectToDatabase(config.sqlParams, config.userTableName)) {
     logger.log('Error connecting to database')
     process.exit(1)
@@ -38,7 +38,7 @@ user.tableExisting(config.userTableName, (error, existing) => {
 })
 
 // USER LOGIN
-app.post('/user/login', function (req, res) {
+app.post('/user/login', function(req, res) {
     let info = req.body.body
     console.log(info)
     if (user.isEmailValid(info.email)) {
@@ -64,47 +64,45 @@ app.post('/user/login', function (req, res) {
 })
 
 // USER CREATION
-app.post('/user/create', function (req, res) {
-    console.log('someone access create')
-    let info = req.body
-    if (user.isEmailValid(info.email)) {
-        console.log('email is valid 1')
-        user.isEmailAlreadyTaken(info.email, (error, existing) => {
-            if (error) {
-                res.json({ success: false, error: 'system error' })
-            } else if (existing) {
-                res.json({ success: false, error: 'email not available' })
-            } else {
-                if (user.isPasswordValid(info.password)) {
-                    console.log('password passed')
-                    user.createUser(info.email, info.password, info.userData ? info.userData : {},
-                        (error, loginData, userData, confirmToken) => {
-                            if (!error && confirmToken) {
-                                console.log('good Job boy')
-                                res.json({ success: true, confirmToken: confirmToken })
-                            } else {
-                                res.json({ success: false, error: 'user not created' })
-                            }
-                        })
+app.post('/user/create', function(req, res) {
+        console.log('someone access create')
+        let info = req.body
+        if (user.isEmailValid(info.email)) {
+            console.log('email is valid 1')
+            user.isEmailAlreadyTaken(info.email, (error, existing) => {
+                if (error) {
+                    res.json({ success: false, error: 'system error' })
+                } else if (existing) {
+                    res.json({ success: false, error: 'email not available' })
                 } else {
-                    res.json({ success: false, error: 'password not valid' })
+                    if (user.isPasswordValid(info.password)) {
+                        console.log('password passed')
+                        user.createUser(info.email, info.password, info.userData ? info.userData : {},
+                            (error, loginData, userData, confirmToken) => {
+                                if (!error && confirmToken) {
+                                    console.log('good Job boy')
+                                    res.json({ success: true, confirmToken: confirmToken })
+                                } else {
+                                    res.json({ success: false, error: 'user not created' })
+                                }
+                            })
+                    } else {
+                        res.json({ success: false, error: 'password not valid' })
+                    }
                 }
-            }
-        })
-    } else {
-        res.json({ success: false, error: 'email not valid' })
-    }
-    console.log(info);
-    //update database
-    knex('user_login').insert(
-        {first_name:info.first, last_name: info.last, email: info.email , password: info.password, birthdate: info.birthdate ,gender: info.gender}
-        )
-        .then(function (result) {
-            result = console.log("database Updated!")
-        })
-})
-// User log out
-app.post('/user/logout', function (req, res) {
+            })
+        } else {
+            res.json({ success: false, error: 'email not valid' })
+        }
+        console.log(info)
+            // update database
+        knex('user_login').insert({ first_name: info.first, last_name: info.last, email: info.email, password: info.password, birthdate: info.birthdate, gender: info.gender })
+            .then(function(result) {
+                result = console.log('database Updated!')
+            })
+    })
+    // User log out
+app.post('/user/logout', function(req, res) {
     if (req.body.authToken) {
         user.logout(req.body.authToken, (error, isAuthTokenValid, isLoggedOut) => {
             if (!isAuthTokenValid) {
@@ -123,15 +121,15 @@ app.post('/user/logout', function (req, res) {
         res.json({ success: false, error: 'access token not valid' })
     }
 })
-app.get('/login', function (req, res) {
-    res.sendFile(path.join(__dirname, '../Unsolved/public/future.html'))
+app.get('/login', function(req, res) {
+    res.sendFile(path.join(__dirname, './public/future.html'))
 })
-app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, '../Unsolved/public/index.html'))
-})
-// START SERVER LISTENING - PLESK SYSTEM STYLE ////
+app.get('/', function(req, res) {
+        res.sendFile(path.join(__dirname, './public/index.html'))
+    })
+    // START SERVER LISTENING - PLESK SYSTEM STYLE ////
 
-app.listen(PORT, function () {
+app.listen(PORT, function() {
     console.log(
         '==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.',
         PORT,
