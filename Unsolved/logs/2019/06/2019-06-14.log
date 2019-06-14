@@ -7,3 +7,62 @@
 01:03:28.983 GMT - Error verify password: josigreat@gmail.com : null
 01:06:22.284 GMT - Error verify password: josigreat@gmail.com : null
 01:50:32.722 GMT - Error verify password: josigreat@gmail.com : null
+04:58:58.185 GMT - Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+04:59:45.000 GMT - Error: ER_BAD_DB_ERROR: Unknown database 'newuser2'
+05:00:26.431 GMT - Error: ER_BAD_DB_ERROR: Unknown database 'user'
+05:02:26.982 GMT - Error: ER_BAD_DB_ERROR: Unknown database 'user'
+05:03:23.279 GMT - Error: ER_BAD_DB_ERROR: Unknown database 'user'
+08:48:04.848 GMT - Error DB: Error: ER_BAD_FIELD_ERROR: Unknown column 'userid' in 'field list'
+08:50:31.371 GMT - Error: ER_BAD_FIELD_ERROR: Unknown column 'logindata' in 'field list'
+08:52:08.318 GMT - Error: ER_BAD_FIELD_ERROR: Unknown column 'sessiondata' in 'field list'
+08:53:50.762 GMT - Error: ER_NO_SUCH_TABLE: Table 'testdb.user_login_confirm_creation' doesn't exist
+08:56:09.661 GMT - OK, table user dropped if existed
+08:56:09.683 GMT - OK, table user created if not existed
+08:56:09.685 GMT - OK, table user confirm dropped if existed
+08:56:09.700 GMT - OK, table user confirm created if not existed
+08:56:09.702 GMT - OK, table reset password dropped if existed
+08:56:09.707 GMT - OK, table delete user dropped if existed
+08:56:09.718 GMT - OK, table reset password created if not existed
+08:56:09.722 GMT - OK, table delete user created if not existed
+08:56:09.723 GMT - OK, table modify email dropped if existed
+08:56:09.737 GMT - OK, table modify email created if not existed
+09:02:23.894 GMT - OK, table user dropped if existed
+09:02:23.913 GMT - OK, table user created if not existed
+09:02:23.915 GMT - OK, table user confirm dropped if existed
+09:02:23.930 GMT - OK, table user confirm created if not existed
+09:02:23.932 GMT - OK, table reset password dropped if existed
+09:02:23.939 GMT - OK, table delete user dropped if existed
+09:02:23.946 GMT - OK, table reset password created if not existed
+09:02:23.953 GMT - OK, table delete user created if not existed
+09:02:23.955 GMT - OK, table modify email dropped if existed
+09:02:23.969 GMT - OK, table modify email created if not existed
+09:14:55.854 GMT - OK, table user dropped if existed
+09:14:55.881 GMT - OK, table user created if not existed
+09:14:55.883 GMT - OK, table user confirm dropped if existed
+09:14:55.897 GMT - OK, table user confirm created if not existed
+09:14:55.899 GMT - OK, table reset password dropped if existed
+09:14:55.903 GMT - OK, table delete user dropped if existed
+09:14:55.914 GMT - OK, table reset password created if not existed
+09:14:55.919 GMT - OK, table delete user created if not existed
+09:14:55.921 GMT - OK, table modify email dropped if existed
+09:14:55.934 GMT - OK, table modify email created if not existed
+10:23:50.966 GMT - OK, table user dropped if existed
+10:23:50.985 GMT - OK, table user created if not existed
+10:23:50.988 GMT - OK, table user confirm dropped if existed
+10:23:51.001 GMT - OK, table user confirm created if not existed
+10:23:51.003 GMT - OK, table reset password dropped if existed
+10:23:51.010 GMT - OK, table delete user dropped if existed
+10:23:51.024 GMT - OK, table reset password created if not existed
+10:23:51.031 GMT - OK, table delete user created if not existed
+10:23:51.033 GMT - OK, table modify email dropped if existed
+10:23:51.047 GMT - OK, table modify email created if not existed
+10:31:32.736 GMT - OK, table user dropped if existed
+10:31:32.757 GMT - OK, table user created if not existed
+10:31:32.759 GMT - OK, table user confirm dropped if existed
+10:31:32.772 GMT - OK, table user confirm created if not existed
+10:31:32.774 GMT - OK, table reset password dropped if existed
+10:31:32.777 GMT - OK, table delete user dropped if existed
+10:31:32.789 GMT - OK, table reset password created if not existed
+10:31:32.792 GMT - OK, table delete user created if not existed
+10:31:32.793 GMT - OK, table modify email dropped if existed
+10:31:32.807 GMT - OK, table modify email created if not existed
