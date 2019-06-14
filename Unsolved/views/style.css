@@ -72,7 +72,9 @@ input{clear: both;
 /* future.html styling */
 
 
-
+.nav{
+  margin-top: 100px;
+}
 
 .future {
     
