@@ -7,3 +7,6 @@
 01:03:28.983 GMT - Error verify password: josigreat@gmail.com : null
 01:06:22.284 GMT - Error verify password: josigreat@gmail.com : null
 01:50:32.722 GMT - Error verify password: josigreat@gmail.com : null
+04:58:58.185 GMT - Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+04:59:45.000 GMT - Error: ER_BAD_DB_ERROR: Unknown database 'newuser2'
+05:00:26.431 GMT - Error: ER_BAD_DB_ERROR: Unknown database 'user'
