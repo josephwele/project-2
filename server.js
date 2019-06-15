@@ -66,6 +66,7 @@ app.post('/user/login', function(req, res) {
     } else {
         res.json('email is not valid')
     }
+
 })
 
 // USER CREATION
@@ -117,7 +118,7 @@ app.post('/user/logout', function(req, res) {
                 res.json({ success: false, error: 'system error' })
             } else if (isLoggedOut) {
                 console.log('logout succesfull')
-                res.json({ success: true })
+                res.sendFile(path.join(__dirname, './public/index.html'))
             } else {
                 res.json({ success: false, error: 'logout not done' })
             }
@@ -154,7 +155,14 @@ app.get('/db', async(req, res) => {
         res.send("Error " + err);
     }
 })
+app.post('/user/matcher', function(req, res) {
+    var info = req.body;
+    knex('ride_info').insert({ start_zip_code: info.start, end_zip_code: info.end, cellphone: info.number, day_of_ride: info.date, start_time: info.time })
+        .then(function() {
+            console.log("Database updated!")
 
+        })
+})
 app.listen(PORT, function() {
     console.log(
         '==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.',

@@ -5,63 +5,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <base href="/">
-    <link rel="stylesheet" href="styles/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-    <link rel="short cut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="future.css">
     <title>Document</title>
 </head>
 
-<body background="assests/background-cover.jpg" style="background-repeat:no-repeat;background-position: center center">
-    <div class="port">
-        <div class="heading">
-            <h2><b>Well come to YSP Bikes!</b></h2>
-
-            <div class="loginName1">
-                <h2>Welcome</h2>
-                <asp:LoginName ID="loginName1" runat="server" Font-Bold="true" />
-                <br />
-                <br />
-                <asp:LoginStatus ID="LoginStatus1" runat="server" />
+<body class="future">
+    <div class="container-fluid">
+        <nav class="navbar ">
+            <div id="logout">
+                <form action="user/logout" method="POST"><button>logout</button></form>
             </div>
 
-            <h2><i>Where do you want to ride?</i></h2>
+            <h2><b>Well come to YSP Bikes!</b></h2>
+            <form class="form-inline">
+                <div id="welcome"><span class="welcomeHead">Welome, <?= $_SESSION['MM_Username'] ?>.</span>
+
+
+            </form>
+
+
+        </nav>
         </div>
 
 
-        <div>
-            <p>Start Location</p>
-            <input type="text" name="start" id="start" placeholder="Zipcode">
-        </div><br>
 
-        <div>
+        <div class="form">
 
-            <p>Destination</p>
-            <input type="text" name="destination" id="destination" placeholder="Zipcode">
-        </div><br>
+            <div class="heading">
 
-        <div>
-
-            <p>Phone Number</p>
-            <input type="text" name="phonenum" class="phonenum" id="phonenum" placeholder="Phone Number">
-
-        </div><br>
-
-        <div>
-            </p>Starting Date</p>
-            <input type="date" name="date" id="date">
-        </div><br>
-        <div>
-            <p>Starting time</p>
-            <input type="time" name="time" id="time">
-        </div><br>
-
-        <input type="submit" id="future-btn" class="future-btn" value="Submit">
+                <h2><i>Where do you want to ride?</i></h2>
+            </div>
 
 
-    </div>
+            <div>
+                <p>Start Location</p>
+                <input type="text" name="start" id="start" placeholder="Zipcode">
+            </div><br>
+
+            <div>
+
+                <p>Destination</p>
+                <input type="text" name="destination" id="destination" placeholder="Zipcode">
+            </div><br>
+
+            <div>
+
+                <p>Phone Number</p>
+                <input type="text" name="phonenum" class="phonenum" id="phonenum" placeholder="Phone Number">
+
+            </div><br>
+
+            <div>
+                </p>Starting Date</p>
+                <input type="date" name="date" id="date">
+            </div><br>
+            <div>
+                <p>Starting time</p>
+                <input type="time" name="time" id="time">
+            </div><br>
+
+            <input type="submit" id="future-btn" class="future-btn" value="Submit">
 
 
+        </div>
+
+        <script src="rideLog.js"></script>
 </body>
 
 </html>
