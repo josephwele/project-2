@@ -1,31 +1,3 @@
-// window.onload = function () {
-//   alert('js connnected')
-// }
-// sign in form
-
-/*document.querySelector('#sign-in').addEventListener('click', function(event) {
-    event.preventDefault();
-
-  // Make a logininfo object
-  var logininfo = {
-    email: document.querySelector('#email').value.trim(),
-    password: document.querySelector('#password').value.trim()
-
-  }
-
-  console.log(logininfo)
-
-    // Send the POST request.
-    fetch('http://localhost:300/user/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(logininfo)
-    }).then(function(response) {
-        fetch(response.url, {
-            method: 'get'
-        })
-    });
-});*/
 // user create form
 document.querySelector('#btn').addEventListener('click', function (event) {
   event.preventDefault()
@@ -33,12 +5,14 @@ document.querySelector('#btn').addEventListener('click', function (event) {
   var signupinfo = {
     email: document.querySelector('#e-mail').value.trim(),
     password: document.querySelector('#pass').value.trim(),
-    first: document.querySelector('#fname').value.trim(),
-    last: document.querySelector('#lname').value.trim()
+    first: document.querySelector('#first-name').value.trim(),
+    last: document.querySelector('#last-name').value.trim(),
+    gender: document.querySelector('input[name=gender]:checked').value,
+    birthdate: document.querySelector('input[name=birthdate]').value
   }
   console.log(signupinfo)
   // Send the POST request.
-  fetch('http://localhost:300/user/create', {
+  fetch('http://localhost:3000/user/create', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(signupinfo)
