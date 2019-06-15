@@ -17,6 +17,10 @@ document.querySelector('#btn').addEventListener('click', function (event) {
   }).then(function (res) {
     console.log(res)
   })
+  document.querySelector('#e-mail').value = ''
+  document.querySelector('#pass').value = ''
+  document.querySelector('#first-name').value = ''
+  document.querySelector('#last-name').value = ''
 })
 // user login
 // Send the POST request.
