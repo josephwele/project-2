@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+04:26:35.515 GMT - Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'node_user'@'localhost' (using password: NO)
+=======
 00:03:35.306 GMT - OK, table user dropped if existed
 00:03:35.333 GMT - OK, table user created if not existed
 00:03:35.335 GMT - OK, table user confirm dropped if existed
@@ -68,3 +71,4 @@
 15:40:40.206 GMT - OK, table modify email dropped if existed
 15:40:40.216 GMT - OK, table modify email created if not existed
 15:40:40.234 GMT - OK, table reset password created if not existed
+>>>>>>> 20ab5bf581e7309597b5562c2745a06262cabf2e
