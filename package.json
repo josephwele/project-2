@@ -20,7 +20,7 @@
         "futurosenso-log": "^1.2.1",
         "futurosenso-user-mysql": "^1.0.31",
         "install": "^0.12.2",
-        "knex": "^0.17.6",
+        "knex": "^0.19.5",
         "moleculer-twilio": "^1.0.10",
         "moment": "^2.24.0",
         "mysql": "^2.12.0",
